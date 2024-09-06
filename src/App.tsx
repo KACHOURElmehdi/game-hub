@@ -1,4 +1,5 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
+import Header from "./components/Header";
 
 const App = () => {
   return (
@@ -8,10 +9,10 @@ const App = () => {
         lg: `"header header" "nav main" `,
       }}
     >
-      <GridItem area="header" bg="blue.500">
-        header
+      <GridItem area="header" >
+        <Header />
       </GridItem>
-      <Show above="lg">
+      <Show above="lg"> { /* pour responsive */}
         <GridItem area="nav" bg="red.500">
           nav
         </GridItem>
