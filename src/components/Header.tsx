@@ -1,11 +1,12 @@
-import { HStack, Image, Text } from "@chakra-ui/react";
+import { HStack, Image } from "@chakra-ui/react";
 import logo from "../assets/batman_logo.svg";
+import ColorModeSwitch from "./ColorModeSwitch";
 
 function Header() {
   return (
-    <HStack>
+    <HStack justifyContent={'space-between'} padding={'0 20px'}>
       <Image src={logo} boxSize={"60px"} />
-      <Text>cdd</Text>
+      <ColorModeSwitch />
     </HStack>
   );
 }
