@@ -14,11 +14,11 @@ const App = () => {
         <Header />
       </GridItem>
       <Show above="lg"> { /* pour responsive */}
-        <GridItem area="nav" bg="red.500">
+        <GridItem area="nav">
           nav
         </GridItem>
       </Show>
-      <GridItem area="main" bg="yellow.500">
+      <GridItem area="main">
         <GameGrid />
       </GridItem>
     </Grid>

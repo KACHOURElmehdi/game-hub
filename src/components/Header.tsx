@@ -4,7 +4,7 @@ import ColorModeSwitch from "./ColorModeSwitch";
 
 function Header() {
   return (
-    <HStack justifyContent={'space-between'} padding={'0 20px'}>
+    <HStack justifyContent={"space-between"} padding={"0 20px"}>
       <Image src={logo} boxSize={"60px"} />
       <ColorModeSwitch />
     </HStack>
