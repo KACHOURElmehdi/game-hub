@@ -5,7 +5,7 @@ function GameCardSkeleton() {
     <Card>
       <Skeleton h={'280px'}/>
       <CardBody>
-        <SkeletonText />
+        <SkeletonText noOfLines={2} spacing="4"/>
       </CardBody>
     </Card>
   );
