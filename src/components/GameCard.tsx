@@ -17,7 +17,7 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <Card width={'400px'} borderRadius={10} overflow={"hidden"}>
+    <Card>
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
         <VStack alignItems={"start"} spacing={2}>
