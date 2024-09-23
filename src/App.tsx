@@ -10,13 +10,17 @@ const App = () => {
         base: `"header" "main"`,
         lg: `"header header" "nav main" `,
       }}
+      templateColumns={{
+        base: '1fr',
+        lg: '200px 1fr'
+      }}
     >
       <GridItem area="header" >
         <Header />
       </GridItem>
       <Show above="lg"> { /* pour responsive */}
-        <GridItem area="nav">
-        <GenreList />
+        <GridItem area="nav" paddingX={5}>
+          <GenreList />
         </GridItem>
       </Show>
       <GridItem area="main">
