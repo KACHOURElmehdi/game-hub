@@ -12,9 +12,18 @@ export interface Game {
   name: string;
   background_image: string;
   platforms: { platform: Platform }[];
-  metacritic: number;
+  metacritic: number; // cSpell:ignore metacritic
 }
 
-const useGames = (selectedGenre: Genre | null) => useData<Game>('/games', { params: { genres: selectedGenre?.id }, [selectedGenre?.id] })
+const useGames = (selectedGenre: Genre | null) => {
+// Ensure a stable dependency array by passing an empty array when no genre is selected
+const genreId = selectedGenre ? selectedGenre.id : null;
+  return useData<Game>(
+    '/games',
+    { params: { genres: genreId } }, 
+    selectedGenre ? [genreId] : []  // Add a condition to check if selectedGenre is null before accessing id.
+  );
+};
+
 
 export default useGames; 
