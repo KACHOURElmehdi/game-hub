@@ -28,7 +28,7 @@ const App = () => {
           <Text fontSize="xl" fontWeight="bold" marginBottom={2}>
             Gender
           </Text>
-          <GenreList onSelectedGenre={(genre) => setSelectedGenre(genre)} />
+          <GenreList selectedGenre={selectedGenre} onSelectedGenre={(genre) => setSelectedGenre(genre)} />
         </GridItem>
       </Show>
       <GridItem area="main">
