@@ -10,7 +10,7 @@ function PlatformSelector() {
 
   return (
     <Menu>
-      <MenuButton as={Button} rightIcon={<BsChevronDown />}>
+      <MenuButton margin={"0 10px"} width="fit-content" as={Button} rightIcon={<BsChevronDown />}>
         Platforms
       </MenuButton>
       <MenuList>

@@ -32,7 +32,7 @@ const App = () => {
           <GenreList selectedGenre={selectedGenre} onSelectedGenre={(genre) => setSelectedGenre(genre)} />
         </GridItem>
       </Show>
-      <GridItem area="main">
+      <GridItem area="main" display="flex" flexDirection="column" gap={2}>
         <PlatformSelector />
         <GameGrid selectedGenre={selectedGenre}/>
       </GridItem>
