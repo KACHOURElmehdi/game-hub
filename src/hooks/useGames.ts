@@ -15,11 +15,16 @@ export interface Game {
   metacritic: number; // cSpell:ignore metacritic
 }
 
-const useGames = (selectedGenre: Genre | null, selectedPlatform: Genre | null) => {
+const useGames = (selectedGenre: Genre | null, selectedPlatform: Platform | null) => {
   return useData<Game>(
     '/games',
-    { params: { genres: selectedGenre?.id, platform: selectedPlatform?.id } }, 
-    [ selectedGenre?.id, selectedPlatform?.id ]
+    { 
+      params: { 
+        genres: selectedGenre?.id, 
+        platforms: selectedPlatform?.id 
+      }
+    }, 
+    [selectedGenre?.id, selectedPlatform?.id]
   );
 };
 
